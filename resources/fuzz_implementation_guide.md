@@ -54,4 +54,4 @@ python Fuzz4All/fuzz.py --config config/full_run/c_std.yaml main_with_config \
   --target gcc            # 对应 C 目标的编译器/命令
 ```
 
-以上流程与建议可直接套用到新的语言或 API 级 fuzz 工具，实现“配置驱动 + LLM 生成 + 可插拔验证”的快速开发。***
+以上流程与建议可直接套用到新的语言或 API 级 fuzz 工具，实现“配置驱动 + LLM 生成 + 可插拔验证”的快速开发。
