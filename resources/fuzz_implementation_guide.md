@@ -21,7 +21,7 @@
 - `Fuzz4All/fuzz.py`：CLI 入口与主循环。
 - `Fuzz4All/make_target.py`：根据配置实例化具体 `Target` 子类。
 - `Fuzz4All/target/*/*.py`：各语言实现（如 `C.py` 调用编译器校验，`SMT.py` 调 SMT solver 等）。
-- `config/`：完整、定向、消融（对比不同组件/策略的 ablation）实验的配置示例，可直接拷贝定制。
+- `config/`：完整、定向、消融实验的配置示例，可直接拷贝定制。
 
 ## 配置要点（示例字段）
 
@@ -54,6 +54,6 @@ python Fuzz4All/fuzz.py --config config/full_run/c_std.yaml main_with_config \
   --target gcc            # 对应 C 目标的编译器/命令
 ```
 
-> 提示：`--config` 是 click group 级参数，需放在子命令 `main_with_config` 之前。
+> 提示：`--config` 参数必须在子命令 `main_with_config` 之前指定，因为它是 click group 级别的参数。
 
 以上流程与建议可直接套用到新的语言或 API 级 fuzz 工具，实现“配置驱动 + LLM 生成 + 可插拔验证”的快速开发。
