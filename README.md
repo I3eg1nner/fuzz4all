@@ -21,6 +21,10 @@ the prompt to create new fuzzing inputs.
 
 ![](./resources/overview.gif)
 
+## 📑 Fuzz 实现方案总结
+
+- 详见《[Fuzz4All Fuzz 实现方案总结与优化指南](resources/fuzz_implementation_guide.md)》，包含架构梳理、配置要点、扩展步骤与优化建议，可作为同类工具的开发参考。
+
 ## ⚡ Quick Start
 
 > [!Important]
@@ -185,4 +189,3 @@ We have included a complete list of bugs found by `Fuzz4All` under `bugs/` folde
   year = {2024},
 }
 ```
-
